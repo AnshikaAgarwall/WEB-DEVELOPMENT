@@ -1,0 +1,157 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style type="text/css">
+        .carousel-item img
+        {
+            height:370px
+        }
+
+
+    </style>
+    <title>RED GOLD</title>
+</head>
+<body>
+
+  <div class="container-fluid">
+      <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWEQgouavGAS60LcAQIsKYulhmp3yGbmCs6b84wdt-mQ&s" width="50px" height="50px" class="d-inline-block align-top" style="border-radius: 30px;" alt="">
+              <a class="navbar-brand" style="font-size: 30px;">RED GOLD</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                          <a class="nav-link" href="home">HOME <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="AvailableBlood">AVAILABILITY</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="certificate">CERTIFICATE</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="contactus">CONTACT US</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="about">ABOUT US</a>
+                      </li>
+
+                  </ul>
+              </div>
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    
+                    
+                    <form class="form-inline" method="post">
+                        {% csrf_token %}
+                    
+                        <H6>REGISTER</H6>
+                          <a class="" href="register" style="margin-left:5px;">REGISTER
+                            <!-- <input type="submit" name="subBtn3" value="REGISTER" class="btn btn-light"> -->
+                         </a>
+                         <H6>LOGIN</H6>
+                          <a class="" href="login">LOGIN
+                              <!-- <input type="submit" name="subBtn4" value="LOGIN" class="btn btn-light ml-2"> -->
+                          </a>
+
+                      
+                    </form>  
+                  </li>
+              </ul>
+          </nav>
+      </div>
+
+  </div>
+  <section style="margin-top: 5px; color: rgb(14, 14, 68); font-weight: bold;">
+      <marquee behavior="scroll" direction="left" scrollamount="18">
+          "Give the gift of red gold. Donate blood and be a hero to those in need."
+      </marquee>
+  </section>
+  <div class="container-fluid">
+      <!--Carousel-->
+      <section style="margin-top: 20pxpx;">
+          <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                  <div class="carousel-item active" data-interval="3000">
+                      <img src="https://www.sriramakrishnahospital.com/wp-content/uploads/2021/06/Blood-Donation-1.jpg" class="d-block w-100" alt="...">
+                      <div class="carousel-caption d-none d-md-block">
+                          <h5>Every Drop Counts!!!!!!!!</h5>
+                          <p>Every life matter.</p>
+                      </div>
+                  </div>
+                  <div class="carousel-item" data-interval="2000">
+                      <img src="https://static.vecteezy.com/system/resources/previews/022/275/600/non_2x/blood-drop-world-blood-donors-day-concept-banner-template-with-glowing-low-poly-futuristic-modern-abstract-illustration-vector.jpg" class="d-block w-100" alt="...">
+                      <div class="carousel-caption d-none d-md-block">
+                          <h5>We All Are Humans!!!!!!</h5>
+                          <p>Every life Matters.</p>
+                      </div>
+                  </div>
+                  <div class="carousel-item" data-interval="1000">
+                      <img src="https://static.vecteezy.com/system/resources/previews/000/581/177/original/world-blood-donor-day-banner-with-glowing-low-poly-test-tube-and-blood-drop-on-dark-blue-background-vector.jpg" class="d-block w-100" alt="...">
+                      <div class="carousel-caption d-none d-md-block">
+                          <h5>We Save Lives</h5>
+                          <p>We store blood.</p>
+                      </div>
+                  </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+              </button>
+          </div>
+      </section>
+      <!--TEXT CARD-->
+      <section>
+          <div class="row" style="margin: 50px;">
+              <div class="col-md-4 col-lg-4">
+                  <img src="https://content.presentermedia.com/files/clipart/00019000/19825/blood_donation_800_wht.jpg" style="height: 400px;width:500px">
+              </div>
+              <div class="col-md-4 col-lg-4">
+                  <section style="min-height:100px ;max-width:300px  ; margin: auto ;padding: 30px ;">
+                      <div class="card card-center text-center ">
+                          <div class="card-header" style="color: rgb(215, 64, 64); font-weight: bold; ">
+                              NEED OF BLOOD
+                          </div>
+                          <div class="card-body">
+                              <h5 class="card-title">EVERY DROP COUNTS!!!!!!!</h5>
+                              <p class="card-text text-body-danger" style="font-family:cursive">Blood donation saves lives by providing essential blood components needed for medical treatments.
+                                  Each blood donation can potentially save up to three lives as blood can be separated into its components like red blood cells, plasma, and platelets.
+                                  Blood donation centers follow strict protocols to ensure the safety of donors and recipients, including screening for infectious diseases.
+                                  Voluntary blood donation promotes community solidarity and can create a reliable supply of blood for emergencies and medical treatments..</p>
+                              <a href="showall" class="btn btn-danger">COUNTS</a>
+                          </div>
+                          <div class="card-footer text-body-secondary" style="font-weight: bold;">
+                              !!!!!! रक्तदान महादान !!!!!!
+                          </div>
+                      </div>
+                  </section>
+              </div>
+          </div>
+      </section>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+      AOS.init();
+  </script>
+</body>
+</html>

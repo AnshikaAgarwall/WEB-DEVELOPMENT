@@ -1,0 +1,39 @@
+{%include 'Header.html' %}
+<section>
+    <div class="container">
+      <h1 align="center" style="font-size: 50px; padding: 10px; background-color: rgb(232, 104, 87); margin-top: 10px;" >OUR HEROES</h1>
+        <table class="table table-bordered">
+            <thead>
+               <tr>
+                 <th >DONOR NAME</th>
+                 <th >DONOR GROUP</th>
+                 <th>DATE</th>
+                 <th >AMOUNT</th>
+               </tr>
+            </thead>
+            <tbody>
+                 {% for data in userdata %}
+                 <tr>
+                    <td>{{data.dname }}</td>
+                    <td>{{data.dgroup }}</td>
+                    <td>{{data.date }}</td>
+                    <td>{{data.amt }}</td>
+                 </tr>
+                 {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+</section>
+<!-- 
+
+    <section>
+  <h3 align="center">Marks : {{marks.2}}</h3>
+    <ul>
+        {% for ele in marks %}
+          <li>marks are {{ele}}</li>
+        {% endfor %}
+    </ul>
+</section>
+-->
+{%include 'Footer.html' %}

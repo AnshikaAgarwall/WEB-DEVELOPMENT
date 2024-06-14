@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Donation Form</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+  <h2>Blood Donation Form</h2>
+  <form>
+    <h3>Medical Information</h3>
+    <div class="form-group">
+      <label for="chronicIllness">Do you have any chronic illnesses? (Y/N)</label>
+      <select class="form-control" id="chronicIllness" name="chronicIllness">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+
+    <div class="form-group" id="chronicIllnessDetailsDiv" style="display: none;">
+      <label for="chronicIllnessDetails">If yes, please specify:</label>
+      <input type="text" class="form-control" id="chronicIllnessDetails" name="chronicIllnessDetails">
+    </div>
+
+    <div class="form-group">
+      <label for="medications">Are you currently taking any medications? (Y/N)</label>
+      <select class="form-control" id="medications" name="medications">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+
+    <div class="form-group" id="medicationsDetailsDiv" style="display: none;">
+      <label for="medicationsDetails">If yes, please specify:</label>
+      <input type="text" class="form-control" id="medicationsDetails" name="medicationsDetails">
+    </div>
+
+    <div class="form-group">
+      <label for="donatedBefore">Have you donated blood before? (Y/N)</label>
+      <select class="form-control" id="donatedBefore" name="donatedBefore">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="lastDonation">If yes, when was your last donation?</label>
+      <input type="date" class="form-control" id="lastDonation" name="lastDonation">
+    </div>
+
+    <div class="form-group">
+      <label for="tattoosPiercings">Have you had any tattoos or body piercings in the last 12 months? (Y/N)</label>
+      <select class="form-control" id="tattoosPiercings" name="tattoosPiercings">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="testedPositive">Have you ever tested positive for HIV, Hepatitis B, Hepatitis C, or Syphilis? (Y/N)</label>
+      <select class="form-control" id="testedPositive" name="testedPositive">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="symptoms">Have you had a fever, sore throat, cough, or flu-like symptoms in the last 2 weeks? (Y/N)</label>
+      <select class="form-control" id="symptoms" name="symptoms">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+
+    <h3>Donation Preferences</h3>
+    <div class="form-group">
+      <label for="donationTime">Preferred Donation Time:</label>
+      <input type="text" class="form-control" id="donationTime" name="donationTime" placeholder="Enter preferred donation time">
+    </div>
+
+    <div class="form-group">
+      <label for="donationLocation">Preferred Donation Location:</label>
+      <input type="text" class="form-control" id="donationLocation" name="donationLocation" placeholder="Enter preferred donation location">
+    </div>
+
+    <div class="form-group">
+      <label for="futureDonations">Would you like to be contacted for future donations? (Y/N)</label>
+      <select class="form-control" id="futureDonations" name="futureDonations">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<!-- Bootstrap JS (Optional, for certain Bootstrap components that require JavaScript) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  // Show/hide Chronic Illness Details field based on user selection
+  $('#chronicIllness').change(function(){
+    if($(this).val() === 'Yes'){
+      $('#chronicIllnessDetailsDiv').show();
+    } else {
+      $('#chronicIllnessDetailsDiv').hide();
+    }
+  });
+
+  // Show/hide Medications Details field based on user selection
+  $('#medications').change(function(){
+    if($(this).val() === 'Yes'){
+      $('#medicationsDetailsDiv').show();
+    } else {
+      $('#medicationsDetailsDiv').hide();
+    }
+  });
+</script>
+</body>
+</html>
